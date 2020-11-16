@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://brad123:brad123@contactkeeper.dmimw.mongodb.net/DevConnector?authSource=admin&replicaSet=atlas-9ptxqw-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true",
+    "jwtSecret": "mysecrettoken"
+}
