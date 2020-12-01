@@ -1,4 +1,6 @@
 {
     "mongoURI": "mongodb+srv://brad123:brad123@contactkeeper.dmimw.mongodb.net/DevConnector?authSource=admin&replicaSet=atlas-9ptxqw-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true",
-    "jwtSecret": "mysecrettoken"
+    "jwtSecret": "mysecrettoken",
+    "githubClientId": "fca5d07765ff85a99e53",
+    "githubSecret": "5137d33c32691dce9c48cd0eb7538992dff5de44"
 }
