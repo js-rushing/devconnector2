@@ -3,8 +3,22 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.REMOVE_ALERT = exports.SET_ALERT = void 0;
+exports.LOGOUT = exports.LOGIN_FAIL = exports.LOGIN_SUCCESS = exports.AUTH_ERROR = exports.USER_LOADED = exports.REGISTER_FAIL = exports.REGISTER_SUCCESS = exports.REMOVE_ALERT = exports.SET_ALERT = void 0;
 var SET_ALERT = 'SET_ALERT';
 exports.SET_ALERT = SET_ALERT;
 var REMOVE_ALERT = 'REMOVE_ALERT';
 exports.REMOVE_ALERT = REMOVE_ALERT;
+var REGISTER_SUCCESS = 'REGISTER_SUCCESS';
+exports.REGISTER_SUCCESS = REGISTER_SUCCESS;
+var REGISTER_FAIL = 'REGISTER_FAIL';
+exports.REGISTER_FAIL = REGISTER_FAIL;
+var USER_LOADED = 'USER_LOADED';
+exports.USER_LOADED = USER_LOADED;
+var AUTH_ERROR = 'AUTH_ERROR';
+exports.AUTH_ERROR = AUTH_ERROR;
+var LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+exports.LOGIN_SUCCESS = LOGIN_SUCCESS;
+var LOGIN_FAIL = 'LOGIN_FAIL';
+exports.LOGIN_FAIL = LOGIN_FAIL;
+var LOGOUT = 'LOGOUT';
+exports.LOGOUT = LOGOUT;
