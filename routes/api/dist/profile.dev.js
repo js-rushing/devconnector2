@@ -16,7 +16,9 @@ var _require = require('express-validator'),
 
 var Profile = require('../../models/Profile');
 
-var User = require('../../models/User'); // @route   GET api/profile/me
+var User = require('../../models/User');
+
+var Post = require('../../models/Post'); // @route   GET api/profile/me
 // @desc    Get current users profile
 // @access  Private
 
@@ -258,30 +260,36 @@ router["delete"]('/', auth, function _callee5(req, res) {
         case 0:
           _context5.prev = 0;
           _context5.next = 3;
-          return regeneratorRuntime.awrap(Profile.findOneAndRemove({
+          return regeneratorRuntime.awrap(Post.deleteMany({
             user: req.user.id
           }));
 
         case 3:
           _context5.next = 5;
+          return regeneratorRuntime.awrap(Profile.findOneAndRemove({
+            user: req.user.id
+          }));
+
+        case 5:
+          _context5.next = 7;
           return regeneratorRuntime.awrap(User.findOneAndRemove({
             _id: req.user.id
           }));
 
-        case 5:
+        case 7:
           res.json({
             msg: 'User deleted'
           });
-          _context5.next = 14;
+          _context5.next = 16;
           break;
 
-        case 8:
-          _context5.prev = 8;
+        case 10:
+          _context5.prev = 10;
           _context5.t0 = _context5["catch"](0);
           console.error(_context5.t0.message);
 
           if (!(_context5.t0.kind == 'ObjectId')) {
-            _context5.next = 13;
+            _context5.next = 15;
             break;
           }
 
@@ -289,15 +297,15 @@ router["delete"]('/', auth, function _callee5(req, res) {
             msg: 'Profile not found'
           }));
 
-        case 13:
+        case 15:
           res.status(500).send('Server Error');
 
-        case 14:
+        case 16:
         case "end":
           return _context5.stop();
       }
     }
-  }, null, null, [[0, 8]]);
+  }, null, null, [[0, 10]]);
 }); // @route   PUT api/profile/experience
 // @desc    Add profile experience
 // @access  Private

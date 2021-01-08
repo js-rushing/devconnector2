@@ -188,6 +188,9 @@ exports.login = login;
 var logout = function logout() {
   return function (dispatch) {
     dispatch({
+      type: _types.CLEAR_PROFILE
+    });
+    dispatch({
       type: _types.LOGOUT
     });
   };

@@ -1,0 +1,7 @@
+Don't share your config files to GitHub.
+
+
+Pay for Heroku and get a static IP and whitelist only that IP to access your database. Or manage your own server.
+
+
+Sanitize all user inputs on the backed using something like express-mongoose-sanitze (there are other middle ware for express too).

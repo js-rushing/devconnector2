@@ -11,11 +11,14 @@ var _alert = _interopRequireDefault(require("./alert"));
 
 var _auth = _interopRequireDefault(require("./auth"));
 
+var _profile = _interopRequireDefault(require("./profile"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = (0, _redux.combineReducers)({
   alert: _alert["default"],
-  auth: _auth["default"]
+  auth: _auth["default"],
+  profile: _profile["default"]
 });
 
 exports["default"] = _default;

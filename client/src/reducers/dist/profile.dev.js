@@ -14,10 +14,11 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var initialState = {
-  token: localStorage.getItem('token'),
-  isAuthenticated: null,
+  profile: null,
+  profiles: [],
+  repos: [],
   loading: true,
-  user: null
+  error: {}
 };
 
 function _default() {
@@ -27,30 +28,23 @@ function _default() {
       payload = action.payload;
 
   switch (type) {
-    case _types.USER_LOADED:
+    case _types.GET_PROFILE:
+    case _types.UPDATE_PROFILE:
       return _objectSpread({}, state, {
-        isAuthenticated: true,
-        loading: false,
-        user: payload
-      });
-
-    case _types.REGISTER_SUCCESS:
-    case _types.LOGIN_SUCCESS:
-      localStorage.setItem('token', payload.token);
-      return _objectSpread({}, state, {}, payload, {
-        isAuthenticated: true,
+        profile: payload,
         loading: false
       });
 
-    case _types.REGISTER_FAIL:
-    case _types.AUTH_ERROR:
-    case _types.LOGIN_FAIL:
-    case _types.LOGOUT:
-    case _types.ACCOUNT_DELETED:
-      localStorage.removeItem('token');
+    case _types.PROFILE_ERROR:
       return _objectSpread({}, state, {
-        token: null,
-        isAuthenticated: false,
+        error: payload,
+        loading: false
+      });
+
+    case _types.CLEAR_PROFILE:
+      return _objectSpread({}, state, {
+        profile: null,
+        repos: [],
         loading: false
       });
 
