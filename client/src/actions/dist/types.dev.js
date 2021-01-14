@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ACCOUNT_DELETED = exports.PROFILE_ERROR = exports.CLEAR_PROFILE = exports.UPDATE_PROFILE = exports.GET_PROFILE = exports.LOGOUT = exports.LOGIN_FAIL = exports.LOGIN_SUCCESS = exports.AUTH_ERROR = exports.USER_LOADED = exports.REGISTER_FAIL = exports.REGISTER_SUCCESS = exports.REMOVE_ALERT = exports.SET_ALERT = void 0;
+exports.ACCOUNT_DELETED = exports.PROFILE_ERROR = exports.CLEAR_PROFILE = exports.UPDATE_PROFILE = exports.GET_REPOS = exports.GET_PROFILES = exports.GET_PROFILE = exports.LOGOUT = exports.LOGIN_FAIL = exports.LOGIN_SUCCESS = exports.AUTH_ERROR = exports.USER_LOADED = exports.REGISTER_FAIL = exports.REGISTER_SUCCESS = exports.REMOVE_ALERT = exports.SET_ALERT = void 0;
 var SET_ALERT = 'SET_ALERT';
 exports.SET_ALERT = SET_ALERT;
 var REMOVE_ALERT = 'REMOVE_ALERT';
@@ -24,6 +24,10 @@ var LOGOUT = 'LOGOUT';
 exports.LOGOUT = LOGOUT;
 var GET_PROFILE = 'GET_PROFILE';
 exports.GET_PROFILE = GET_PROFILE;
+var GET_PROFILES = 'GET_PROFILES';
+exports.GET_PROFILES = GET_PROFILES;
+var GET_REPOS = 'GET_REPOS';
+exports.GET_REPOS = GET_REPOS;
 var UPDATE_PROFILE = 'UPDATE_PROFILE';
 exports.UPDATE_PROFILE = UPDATE_PROFILE;
 var CLEAR_PROFILE = 'CLEAR_PROFILE';

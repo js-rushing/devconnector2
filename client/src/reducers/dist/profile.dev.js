@@ -35,8 +35,15 @@ function _default() {
         loading: false
       });
 
+    case _types.GET_PROFILES:
+      return _objectSpread({}, state, {
+        profiles: payload,
+        loading: false
+      });
+
     case _types.PROFILE_ERROR:
       return _objectSpread({}, state, {
+        profile: null,
         error: payload,
         loading: false
       });
@@ -45,6 +52,12 @@ function _default() {
       return _objectSpread({}, state, {
         profile: null,
         repos: [],
+        loading: false
+      });
+
+    case _types.GET_REPOS:
+      return _objectSpread({}, state, {
+        repos: payload,
         loading: false
       });
 
