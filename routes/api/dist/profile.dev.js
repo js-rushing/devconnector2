@@ -522,11 +522,21 @@ router["delete"]('/education/:edu_id', auth, function _callee9(req, res) {
 
 router.get('/github/:username', function (req, res) {
   try {
+    // const options = {
+    //   uri: `https://api.github.com/users/${
+    //     req.params.username
+    //   }/repos?per_page=5&sort=created:ascending&client_id=${config.get(
+    //     'githubClientId'
+    //   )}&client_secret=${config.get('githubSecret')}`,
+    //   method: 'GET',
+    //   headers: { 'user-agent': 'node.js' },
+    // }
     var options = {
-      uri: "https://api.github.com/users/".concat(req.params.username, "/repos?per_page=5&sort=created:ascending&client_id=").concat(config.get('githubClientId'), "&client_secret=").concat(config.get('githubSecret')),
+      uri: encodeURI("https://api.github.com/users/".concat(req.params.username, "/repos?per_page=5&sort=created:asc")),
       method: 'GET',
       headers: {
-        'user-agent': 'node.js'
+        'user-agent': 'node.js',
+        Authorization: "token ".concat(config.get('githubToken'))
       }
     };
     request(options, function (error, response, body) {
