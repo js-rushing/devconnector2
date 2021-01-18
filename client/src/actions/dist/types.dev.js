@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ACCOUNT_DELETED = exports.PROFILE_ERROR = exports.CLEAR_PROFILE = exports.UPDATE_PROFILE = exports.GET_REPOS = exports.GET_PROFILES = exports.GET_PROFILE = exports.LOGOUT = exports.LOGIN_FAIL = exports.LOGIN_SUCCESS = exports.AUTH_ERROR = exports.USER_LOADED = exports.REGISTER_FAIL = exports.REGISTER_SUCCESS = exports.REMOVE_ALERT = exports.SET_ALERT = void 0;
+exports.REMOVE_COMMENT = exports.ADD_COMMENT = exports.ADD_POST = exports.DELETE_POST = exports.UPDATE_LIKES = exports.POST_ERROR = exports.GET_POST = exports.GET_POSTS = exports.ACCOUNT_DELETED = exports.PROFILE_ERROR = exports.CLEAR_PROFILE = exports.UPDATE_PROFILE = exports.GET_REPOS = exports.GET_PROFILES = exports.GET_PROFILE = exports.LOGOUT = exports.LOGIN_FAIL = exports.LOGIN_SUCCESS = exports.AUTH_ERROR = exports.USER_LOADED = exports.REGISTER_FAIL = exports.REGISTER_SUCCESS = exports.REMOVE_ALERT = exports.SET_ALERT = void 0;
 var SET_ALERT = 'SET_ALERT';
 exports.SET_ALERT = SET_ALERT;
 var REMOVE_ALERT = 'REMOVE_ALERT';
@@ -36,3 +36,19 @@ var PROFILE_ERROR = 'PROFILE_ERROR';
 exports.PROFILE_ERROR = PROFILE_ERROR;
 var ACCOUNT_DELETED = 'ACCOUNT_DELETED';
 exports.ACCOUNT_DELETED = ACCOUNT_DELETED;
+var GET_POSTS = 'GET_POSTS';
+exports.GET_POSTS = GET_POSTS;
+var GET_POST = 'GET_POST';
+exports.GET_POST = GET_POST;
+var POST_ERROR = 'POST_ERROR';
+exports.POST_ERROR = POST_ERROR;
+var UPDATE_LIKES = 'UPDATE_LIKES';
+exports.UPDATE_LIKES = UPDATE_LIKES;
+var DELETE_POST = 'DELETE_POST';
+exports.DELETE_POST = DELETE_POST;
+var ADD_POST = 'ADD_POST';
+exports.ADD_POST = ADD_POST;
+var ADD_COMMENT = 'ADD_COMMENT';
+exports.ADD_COMMENT = ADD_COMMENT;
+var REMOVE_COMMENT = 'REMOVE_COMMENT';
+exports.REMOVE_COMMENT = REMOVE_COMMENT;
